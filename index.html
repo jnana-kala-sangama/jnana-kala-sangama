@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jnana Kala Sangama</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#fffaf3;
+}
+
+header{
+    background:#ff6b35;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+nav{
+    background:#333;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
+
+.hero{
+    text-align:center;
+    padding:50px;
+}
+
+.hero h1{
+    color:#ff6b35;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.activities{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#ff6b35;
+}
+
+.slot{
+    background:#f1f1f1;
+    padding:8px;
+    margin:5px 0;
+    border-radius:5px;
+}
+
+.registration{
+    margin-top:40px;
+    padding:30px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.btn{
+    background:#ff6b35;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#e45425;
+}
+
+.payment-btn{
+    background:#1e40af;
+}
+
+.payment-btn:hover{
+    background:#16338a;
+}
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Jnana Kala Sangama</h1>
+<p>Learn • Create • Grow</p>
+</header>
+
+<nav>
+#activitiesActivities</a>
+#registerRegister</a>
+#contactContact</a>
+</nav>
+
+<section class="hero">
+<h1>Admissions Open</h1>
+<p>
+Bharatanatyam, Karate, Western Dance, Yoga,
+Guitar and Keyboard Classes
+</p>
+</section>
+
+<div class="container">
+
+<section id="activities">
+<h2>Activities</h2>
+
+<div class="activities">
+
+<div class="card">
+<h3>🪷 Bharatanatyam</h3>
+<p>Monthly Fee: ₹1500</p>
+<div class="slot">Saturday 9:00 AM - 10:00 AM (8 Seats)</div>
+<div class="slot">Sunday 10:30 AM - 11:30 AM (3 Seats)</div>
+</div>
+
+<div class="card">
+<h3>🥋 Karate</h3>
+<p>Monthly Fee: ₹1200</p>
+<div class="slot">Saturday 7:30 AM - 8:30 AM (5 Seats)</div>
+<div class="slot">Sunday 8:00 AM - 9:00 AM (10 Seats)</div>
+</div>
+
+<div class="card">
+<h3>💃 Western Dance</h3>
+<p>Monthly Fee: ₹1300</p>
+<div class="slot">Saturday 4:00 PM - 5:00 PM (2 Seats)</div>
+<div class="slot">Sunday 4:30 PM - 5:30 PM (7 Seats)</div>
+</div>
+
+<div class="card">
+<h3>🧘 Yoga</h3>
+<p>Monthly Fee: ₹1000</p>
+<div class="slot">Monday & Thursday 6:30 AM</div>
+<div class="slot">Saturday 6:30 PM</div>
+</div>
+
+<div class="card">
+<h3>🎸 Guitar</h3>
+<p>Monthly Fee: ₹1800</p>
+<div class="slot">Saturday 11:00 AM</div>
+<div class="slot">Sunday 3:00 PM</div>
+</div>
+
+<div class="card">
+<h3>🎹 Keyboard</h3>
+<p>Monthly Fee: ₹1700</p>
+<div class="slot">Saturday 12:00 PM</div>
+<div class="slot">Sunday 11:30 AM</div>
+</div>
+
+</div>
+</section>
+
+<section id="register" class="registration">
+<h2>Student Registration</h2>
+
+<form>
+
+<label>Student Name</label>
+<input type="text" required>
+
+<label>Age</label>
+<input type="number" required>
+
+<label>Parent / Guardian Name</label>
+<input type="text" required>
+
+<label>Mobile Number</label>
+<input type="tel" required>
+
+<label>Email Address</label>
+<input type="email" required>
+
+<label>Activity</label>
+<select required>
+<option>Bharatanatyam</option>
+<option>Karate</option>
+<option>Western Dance</option>
+<option>Yoga</option>
+<option>Guitar</option>
+<option>Keyboard</option>
+</select>
+
+<label>Available Slot</label>
+<select required>
+<option>Saturday 9:00 AM</option>
+<option>Sunday 10:30 AM</option>
+<option>Saturday 7:30 AM</option>
+<option>Sunday 8:00 AM</option>
+<option>Saturday 4:00 PM</option>
+<option>Sunday 4:30 PM</option>
+</select>
+
+<label>Address</label>
+<textarea rows="4"></textarea>
+
+<button type="submit" class="btn">
+Submit Registration
+</button>
+
+</form>
+
+<br>
+
+<a href="https://razorpay.me/@chandrappalokagna" target="_blank">
+<button class="btn payment-btn">
+Pay Fees via Razorpay
+</button>
+</a>
+
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<p><strong>Jnana Kala Sangama</strong></p>
+<p>Bangalore, Karnataka</p>
+<p>Email: lokagna1993@gmail.com</p>
+<p>Payment: Razorpay</p>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 Jnana Kala Sangama. All Rights Reserved.
+</footer>
+
+</body>
+</html>
