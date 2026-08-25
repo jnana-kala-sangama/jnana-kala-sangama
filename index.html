@@ -3,35 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Jnana Kala Sangama</title>
 
 <style>
-
-body{
-font-family:Arial,sans-serif;
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
 background:#fffaf3;
+color:#333;
+line-height:1.6;
 }
 
 header{
 background:#ff6b35;
 color:white;
-text-align:center;
 padding:20px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.section-title{
+.logo{
+font-size:40px;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+}
+
+.hero{
 text-align:center;
+padding:40px 20px;
+}
+
+.hero h1{
 color:#ff6b35;
-margin:30px 0;
+font-size:42px;
 }
 
 .container{
 width:90%;
 max-width:1200px;
 margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin:40px 0 20px;
+color:#ff6b35;
 }
 
 .activities{
@@ -43,56 +75,37 @@ gap:20px;
 .card{
 background:white;
 padding:20px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 
 .card h3{
+margin-bottom:10px;
 color:#ff6b35;
 }
 
 .fee{
-font-weight:bold;
-font-size:18px;
 color:#1e40af;
-margin:10px 0;
-}
-
-.slot{
-background:#f4f4f4;
-padding:10px;
-border-radius:5px;
+font-weight:bold;
 margin-top:10px;
 }
 
-.form-section{
+.slot{
+background:#f5f5f5;
+padding:10px;
+border-radius:6px;
+margin-top:10px;
+}
+
+.form-section,
+.payment-box,
+.contact,
+.gallery{
+margin-top:30px;
 background:white;
 padding:20px;
-border-radius:10px;
-margin-top:40px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-.payment-box{
-text-align:center;
-background:#f5f8ff;
-padding:25px;
-border-radius:10px;
-margin-top:30px;
-}
-
-.payment-btn{
-background:#1e40af;
-border:none;
-padding:15px 30px;
-font-size:18px;
-color:white;
-cursor:pointer;
-border-radius:8px;
-}
-
-.payment-btn:hover{
-background:#16328a;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 
 iframe{
@@ -101,27 +114,146 @@ height:1200px;
 border:none;
 }
 
-footer{
-margin-top:40px;
-background:#333;
+.payment-btn{
+background:#1e40af;
 color:white;
-padding:20px;
-text-align:center;
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
 }
 
+.payment-btn:hover{
+background:#14307f;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery-item{
+height:180px;
+background:#ececec;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+font-weight:bold;
+color:#666;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+box-shadow:0 5px 10px rgba(0,0,0,.3);
+}
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>🪷 Jnana Kala Sangama</h1>
-<p>Learn • Create • Grow</p>
+
+<div class="logo">🪷</div>
+
+<h2>Jnana Kala Sangama</h2>
+
+<nav>
+<a href="#registerion</a>
+<a hrefsCourses</a>
+#galleryGallery</a>
+<a href="#contact">Contact
+
 </header>
+
+<section class="hero">
+<h1>Learn • Create • Grow</h1>
+<p>
+Admissions Open for Bharatanatyam, Karate, Western Dance,
+Yoga, Guitar and Keyboard
+</p>
+</section>
 
 <div class="container">
 
-<h2 class="section-title">Courses & Timings</h2>
+<!-- REGISTRATION FIRST -->
+
+<section id="register" class="form-section">
+
+<h2 class="section-title">
+Step 1 - Student Registration
+</h2>
+
+<p style="text-align:center;">
+Complete the registration form before payment.
+</p>
+
+<iframe
+src="https://docs.google.com/forms/d/e/1FAIpQLScaYBTRLfFgyepeF1w_QaQ0dXtv-NcwPnTOPMw8AcferKnOxg/viewform?
+Loading…
+</iframe>
+
+</section>
+
+<!-- PAYMENT -->
+
+<section class="payment-box">
+
+<h2 class="section-title">
+Step 2 - Pay Course Fee
+</h2>
+
+<h2 style="text-align:center;color:#1e40af;">
+₹2000 Per Month
+</h2>
+
+<p style="text-align:center;">
+After submitting the registration form,
+please complete the payment.
+</p>
+
+<div style="text-align:center;margin-top:20px;">
+
+<a href="https://razorpay.me/@chandrappalokagna"
+target="_blank">
+
+<button class="payment-btn">
+Pay ₹2000 via Razorpay
+</button>
+
+</a>
+
+</div>
+
+<p style="text-align:center;margin-top:15px;">
+Please keep the payment receipt for verification.
+</p>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<h2 class="section-title">Course Schedule</h2>
 
 <div class="activities">
 
@@ -131,7 +263,7 @@ text-align:center;
 <div class="fee">₹2000 / Month</div>
 <div class="slot">
 Monday & Wednesday<br>
-5:30 PM – 6:30 PM
+5:30 PM - 6:30 PM
 </div>
 </div>
 
@@ -141,7 +273,7 @@ Monday & Wednesday<br>
 <div class="fee">₹2000 / Month</div>
 <div class="slot">
 Tuesday & Thursday<br>
-5:30 PM – 6:30 PM
+5:30 PM - 6:30 PM
 </div>
 </div>
 
@@ -151,7 +283,7 @@ Tuesday & Thursday<br>
 <div class="fee">₹2000 / Month</div>
 <div class="slot">
 Thursday & Saturday<br>
-5:30 PM – 6:30 PM
+5:30 PM - 6:30 PM
 </div>
 </div>
 
@@ -161,55 +293,103 @@ Thursday & Saturday<br>
 <div class="fee">₹2000 / Month</div>
 <div class="slot">
 Monday to Thursday<br>
-5:30 AM – 6:30 AM
+5:30 AM - 6:30 AM
 </div>
 </div>
 
 <div class="card">
 <h3>🎹 Keyboard</h3>
-<p>Music Fundamentals</p>
 <div class="fee">₹2000 / Month</div>
 <div class="slot">
 Sunday<br>
-8:30 AM – 10:00 AM
+8:30 AM - 10:00 AM
 </div>
 </div>
 
 <div class="card">
 <h3>🎸 Guitar</h3>
-<p>Beginner to Advanced</p>
 <div class="fee">₹2000 / Month</div>
 <div class="slot">
 Sunday<br>
-8:30 AM – 10:00 AM
+8:30 AM - 10:00 AM
 </div>
 </div>
 
 </div>
 
-<section class="form-section">
+</section>
 
-<h2 class="section-title">
-Step 1 - Complete Registration
-</h2>
+<!-- GALLERY -->
 
-<p style="text-align:center;">
-Please complete the registration form below first.
-</p>
+<section id="gallery" class="gallery">
 
-<iframe
-src="https://docs.google.com/forms/d/e/1FAIpQLScaYBTRLfFgyepeF1w_QaQ0dXtv-NcwPnTOPMw8AcferKnembedded=true
-Loading…
-</iframe>
+<h2 class="section-title">Gallery</h2>
 
-<div class="payment-box">
+<div class="gallery-grid">
 
-<h2>Step 2 - Pay Course Fee</h2>
+<div class="gallery-item">
+Bharatanatyam Performance
+</div>
 
-<h3 style="color:#1e40af;">
-₹2000 Per Month
-</h3>
+<div class="gallery-item">
+Karate Batch
+</div>
+
+<div class="gallery-item">
+Western Dance Event
+</div>
+
+<div class="gallery-item">
+Yoga Session
+</div>
+
+<div class="gallery-item">
+Keyboard Class
+</div>
+
+<div class="gallery-item">
+Guitar Workshop
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<p><strong>Jnana Kala Sangama</strong></p>
+
+<p>Bengaluru, Karnataka</p>
+
+<p>Email: lokagna1993@gmail.com</p>
 
 <p>
-After submitting the registration form,
-please complete 
+Course Fee:
+₹2000 Per Month
+</p>
+
+<p>
+Payment Method:
+Razorpay
+</p>
+
+</section>
+
+</div>
+
+<!-- WHATSAPP BUTTON -->
+
+<a
+class="whatsapp"
+href="https://wa.me/+919008178901"
+target="_blank">
+💬
+</a>
+
+<footer>
+
+© 2026 Jnana Kala Sangama
