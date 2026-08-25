@@ -1,357 +1,877 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jnana Kala Sangama</title>
+  <meta charset="UTF-8">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-html{
-scroll-behavior:smooth;
-}
+  <meta
+    name="description"
+    content="Jnana Kala Sangama registrations for Bharatanatyam, Karate, Western Dance, Yoga, Keyboard and Guitar classes."
+  >
 
-body{
-background:#fffaf3;
-color:#333;
-}
+  <title>Jnana Kala Sangama</title>
 
-header{
-background:#ff6b35;
-color:white;
-text-align:center;
-padding:20px;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-header h1{
-font-size:36px;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 120px;
+    }
 
-nav{
-margin-top:10px;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf3;
+      color: #333333;
+      line-height: 1.6;
+    }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:bold;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 18px 20px;
+      color: white;
+      background: linear-gradient(135deg, #ff6b35, #e84f20);
+      text-align: center;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18);
+    }
 
-.hero{
-padding:40px 20px;
-text-align:center;
-}
+    header h1 {
+      font-size: 36px;
+      line-height: 1.2;
+    }
 
-.hero h2{
-font-size:40px;
-color:#ff6b35;
-}
+    header p {
+      margin-top: 4px;
+    }
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 22px;
+      margin-top: 14px;
+    }
 
-.section-title{
-text-align:center;
-color:#ff6b35;
-margin:30px 0;
-}
+    nav a {
+      padding: 4px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-.activities{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
+    nav a:hover,
+    nav a:focus {
+      color: #fff1bd;
+      text-decoration: underline;
+    }
 
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
+    .hero {
+      padding: 64px 20px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, #ffe2c4, transparent 42%),
+        radial-gradient(circle at bottom right, #ffd9ce, transparent 43%);
+    }
 
-.card h3{
-color:#ff6b35;
-}
+    .hero h2 {
+      margin-bottom: 12px;
+      color: #f05a28;
+      font-size: 44px;
+    }
 
-.fee{
-font-weight:bold;
-color:#1e40af;
-margin-top:10px;
-}
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: #555555;
+      font-size: 18px;
+    }
 
-.slot{
-margin-top:10px;
-padding:10px;
-background:#f4f4f4;
-border-radius:6px;
-}
+    .hero-button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 13px 25px;
+      border-radius: 8px;
+      color: white;
+      background: #ff6b35;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
 
-.register-btn{
-display:block;
-margin-top:15px;
-background:#ff6b35;
-color:white;
-padding:10px;
-text-align:center;
-text-decoration:none;
-border-radius:6px;
-font-weight:bold;
-}
+    .hero-button:hover {
+      background: #e84f20;
+      transform: translateY(-2px);
+    }
 
-.form-section,
-.payment-box,
-.contact{
-margin-top:30px;
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-iframe{
-width:100%;
-height:1400px;
-border:none;
-}
+    .section-title {
+      margin: 44px 0 22px;
+      color: #f05a28;
+      font-size: 31px;
+      text-align: center;
+    }
 
-.payment-btn{
-background:#1e40af;
-color:white;
-padding:15px 25px;
-border:none;
-font-size:18px;
-border-radius:8px;
-cursor:pointer;
-}
+    .section-intro {
+      max-width: 780px;
+      margin: -8px auto 26px;
+      color: #666666;
+      text-align: center;
+    }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-font-size:28px;
-text-decoration:none;
-box-shadow:0 5px 10px rgba(0,0,0,.3);
-}
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      gap: 20px;
+      margin-bottom: 38px;
+    }
 
-footer{
-margin-top:30px;
-background:#333;
-color:white;
-padding:20px;
-text-align:center;
-}
-</style>
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      background: white;
+      border: 1px solid #f1dfd4;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h3 {
+      margin-bottom: 7px;
+      color: #f05a28;
+      font-size: 22px;
+    }
+
+    .card-description {
+      min-height: 50px;
+      color: #666666;
+    }
+
+    .course-type {
+      display: inline-block;
+      width: fit-content;
+      margin-top: 10px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      color: #7c3aed;
+      background: #f3e8ff;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .fee {
+      margin-top: 12px;
+      color: #1e40af;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .slot {
+      margin-top: 12px;
+      padding: 13px;
+      color: #444444;
+      background: #fff3e8;
+      border-left: 4px solid #ff6b35;
+      border-radius: 7px;
+    }
+
+    .register-btn {
+      display: block;
+      width: 100%;
+      margin-top: auto;
+      padding: 12px 15px;
+      border: 0;
+      border-radius: 7px;
+      color: white;
+      background: #ff6b35;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .register-btn:hover {
+      background: #e84f20;
+    }
+
+    .private-card {
+      border: 2px solid #8b5cf6;
+      background: linear-gradient(145deg, #ffffff, #faf7ff);
+    }
+
+    .private-card .register-btn {
+      background: #7c3aed;
+    }
+
+    .private-card .register-btn:hover {
+      background: #6d28d9;
+    }
+
+    .form-section,
+    .payment-box,
+    .contact {
+      margin-bottom: 34px;
+      padding: 25px;
+      background: white;
+      border: 1px solid #f1dfd4;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .step-label {
+      width: fit-content;
+      margin: 0 auto 12px;
+      padding: 6px 15px;
+      border-radius: 30px;
+      color: #d74416;
+      background: #fff0e7;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .form-section .section-title,
+    .payment-box .section-title,
+    .contact .section-title {
+      margin-top: 10px;
+    }
+
+    .selected-course {
+      display: none;
+      max-width: 760px;
+      margin: 0 auto 20px;
+      padding: 14px 18px;
+      color: #7c2d12;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      border-radius: 9px;
+      text-align: center;
+    }
+
+    .selected-course strong {
+      color: #c2410c;
+    }
+
+    .form-frame-container {
+      width: 100%;
+      margin-top: 20px;
+      overflow: hidden;
+      background: white;
+      border: 1px solid #e7e7e7;
+      border-radius: 10px;
+    }
+
+    .registration-frame {
+      display: block;
+      width: 100%;
+      min-height: 1500px;
+      border: 0;
+    }
+
+    .form-fallback {
+      margin-top: 16px;
+      color: #666666;
+      text-align: center;
+    }
+
+    .form-fallback a {
+      color: #1e40af;
+      font-weight: bold;
+    }
+
+    .payment-box {
+      text-align: center;
+      background: linear-gradient(135deg, #f5f8ff, white);
+      border-color: #dce6ff;
+    }
+
+    .payment-amount {
+      margin: 8px 0;
+      color: #1e40af;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .payment-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      border-radius: 8px;
+      color: white;
+      background: #1e40af;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .payment-btn:hover {
+      background: #16358f;
+      transform: translateY(-2px);
+    }
+
+    .payment-note {
+      margin-top: 16px;
+      color: #666666;
+      font-size: 14px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .contact-details a {
+      color: #1e40af;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 62px;
+      height: 62px;
+      color: white;
+      background: #25d366;
+      border: 3px solid white;
+      border-radius: 50%;
+      font-size: 29px;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    footer {
+      margin-top: 35px;
+      padding: 22px;
+      color: white;
+      background: #333333;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 29px;
+      }
+
+      nav {
+        gap: 5px 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 44px 16px;
+      }
+
+      .hero h2 {
+        font-size: 33px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+
+      .form-section,
+      .payment-box,
+      .contact {
+        padding: 15px;
+      }
+
+      .registration-frame {
+        min-height: 1700px;
+      }
+
+      .whatsapp {
+        right: 14px;
+        bottom: 14px;
+        width: 56px;
+        height: 56px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
+    <h1>🪷 Jnana Kala Sangama</h1>
+    <p>Learn • Create • Grow</p>
 
-<h1>🪷 Jnana Kala Sangama</h1>
+    <nav aria-label="Main navigation">
+      #coursesCourses & Slots</a>
+      #registerRegistration</a>
+      #paymentPayment</a>
+      #contactContact</a>
+    </nav>
+  </header>
 
-<p>Learn • Create • Grow</p>
+  <main>
 
-<nav>
-#coursesCourses</a>
-<a hreferRegistration</a>
-<a href="#payment">Payment</aontact</a>
-</nav>
+    <section class="hero">
+      <h2>Admissions Open</h2>
 
-</header>
+      <p>
+        Registrations are open for Bharatanatyam, Karate, Western Dance,
+        Yoga, Keyboard and Guitar classes.
+      </p>
 
-<section class="hero">
+      #courses
+        View Courses and Register
+      </a>
+    </section>
 
-<h2>Admissions Open</h2>
+    <div class="container">
 
-<p>
-Bharatanatyam • Karate • Western Dance • Yoga • Keyboard • Guitar
-</p>
+      <section id="courses">
 
-</section>
+        <h2 class="section-title">
+          Available Courses & Timings
+        </h2>
 
-<div class="container">
+        <p class="section-intro">
+          Select a course below. The website will open the registration
+          section and attempt to prefill the selected course in Google Forms.
+        </p>
 
-<h2 id="courses" class="section-title">
-Available Courses & Timings
-</h2>
+        <div class="activities">
 
-<div class="activities">
+          <article class="card">
+            <h3>🪷 Bharatanatyam</h3>
 
-<div class="card">
-<h3>🪷 Bharatanatyam</h3>
-<div class="fee">₹2000 / Month</div>
-<div class="slot">
-Monday & Wednesday<br>
-5:30 PM - 6:30 PM
-</div>
-#register
-Register Now
-</a>
-</div>
+            <p class="card-description">
+              Classical Indian dance training.
+            </p>
 
-<div class="card">
-<h3>🥋 Karate</h3>
-<div class="fee">₹2000 / Month</div>
-<div class="slot">
-Tuesday & Thursday<br>
-5:30 PM - 6:30 PM
-</div>
-#register
-Register Now
-</a>
-</div>
+            <div class="fee">₹2000 / Month</div>
 
-<div class="card">
-<h3>💃 Western Dance</h3>
-<div class="fee">₹2000 / Month</div>
-<div class="slot">
-Thursday & Saturday<br>
-5:30 PM - 6:30 PM
-</div>
-#register
-Register Now
-</a>
-</div>
+            <div class="slot">
+              <strong>Days:</strong> Monday & Wednesday
+              <br>
+              <strong>Time:</strong> 5:30 PM - 6:30 PM
+            </div>
 
-<div class="card">
-<h3>🧘 Yoga</h3>
-<div class="fee">₹2000 / Month</div>
-<div class="slot">
-Monday to Thursday<br>
-5:30 AM - 6:30 AM
-</div>
-#register
-Register Now
-</a>
-</div>
+            <button
+              type="button"
+              class="register-btn"
+              onclick="selectCourse('Bharatanatyam')"
+            >
+              Register for Bharatanatyam
+            </button>
+          </article>
 
-<div class="card">
-<h3>🎹 Keyboard</h3>
-<div class="fee">₹2000 / Month</div>
-<div class="slot">
-Sunday<br>
-8:30 AM - 10:00 AM
-</div>
-#register
-Register Now
-</a>
-</div>
+          <article class="card">
+            <h3>🥋 Karate</h3>
 
-<div class="card">
-<h3>🎸 Guitar</h3>
-<div class="fee">₹2000 / Month</div>
-<div class="slot">
-Sunday<br>
-8:30 AM - 10:00 AM
-</div>
-<a href="#register" class="register
-<div class="card">
-<h3>🎹🎸 Private Keyboard & Guitar</h3>
-<div class="fee">₹2000 / Month</div>
-<div class="slot">
-Flexible Timing<br>
-One-to-One Private Session
-</div>
-#register
-Register Private Class
-</a>
-</div>
+            <p class="card-description">
+              Self-defence, discipline and fitness training.
+            </p>
 
-</div>
+            <div class="fee">₹2000 / Month</div>
 
-<section id="register" class="form-section">
+            <div class="slot">
+              <strong>Days:</strong> Tuesday & Thursday
+              <br>
+              <strong>Time:</strong> 5:30 PM - 6:30 PM
+            </div>
 
-<h2 class="section-title">
-Student Registration
-</h2>
+            <button
+              type="button"
+              class="register-btn"
+              onclick="selectCourse('Karate')"
+            >
+              Register for Karate
+            </button>
+          </article>
 
-<p style="text-align:center;margin-bottom:20px;">
-Complete the registration form below.
-</p>
+          <article class="card">
+            <h3>💃 Western Dance</h3>
 
-<iframe
-src="https://docs.google.com/forms/d/e/1FAIpQLScaYBTRLfFgyepeF1w_QaQ0dXtv-NcwPnTOPMw8AcferKnOxg/viewform?embedded=true">
-Loading...
-</iframe>
+            <p class="card-description">
+              Modern dance and performance training.
+            </p>
 
-</section>
+            <div class="fee">₹2000 / Month</div>
 
-<section id="payment" class="payment-box">
+            <div class="slot">
+              <strong>Days:</strong> Thursday & Saturday
+              <br>
+              <strong>Time:</strong> 5:30 PM - 6:30 PM
+            </div>
 
-<h2 class="section-title">
-Pay Course Fee
-</h2>
+            <button
+              type="button"
+              class="register-btn"
+              onclick="selectCourse('Western Dance')"
+            >
+              Register for Western Dance
+            </button>
+          </article>
 
-<h2 style="text-align:center;color:#1e40af;">
-₹2000 Per Month
-</h2>
+          <article class="card">
+            <h3>🧘 Yoga</h3>
 
-<p style="text-align:center;">
-After registration please complete fee payment.
-</p>
+            <p class="card-description">
+              Health, flexibility and wellness sessions.
+            </p>
 
-<div style="text-align:center;margin-top:20px;">
+            <div class="fee">₹2000 / Month</div>
 
-<a href="https://razorpay.me/@chandrappalokagna"
-target="_blank">
+            <div class="slot">
+              <strong>Days:</strong> Monday to Thursday
+              <br>
+              <strong>Time:</strong> 5:30 AM - 6:30 AM
+            </div>
 
-<button class="payment-btn">
-Pay ₹2000 via Razorpay
-</button>
+            <button
+              type="button"
+              class="register-btn"
+              onclick="selectCourse('Yoga')"
+            >
+              Register for Yoga
+            </button>
+          </article>
 
-</a>
+          <article class="card">
+            <h3>🎹 Keyboard</h3>
 
-</div>
+            <p class="card-description">
+              Keyboard and music fundamentals.
+            </p>
 
-</section>
+            <div class="fee">₹2000 / Month</div>
 
-<section id="contact" class="contact">
+            <div class="slot">
+              <strong>Day:</strong> Sunday
+              <br>
+              <strong>Time:</strong> 8:30 AM - 10:00 AM
+            </div>
 
-<h2 class="section-title">
-Contact Us
-</h2>
+            <button
+              type="button"
+              class="register-btn"
+              onclick="selectCourse('Keyboard')"
+            >
+              Register for Keyboard
+            </button>
+          </article>
 
-<p><strong>Jnana Kala Sangama</strong></p>
-<p>Bengaluru, Karnataka</p>
-<p>Email: lokagna1993@gmail.com</p>
-<p>WhatsApp: 9008178901</p>
+          <article class="card">
+            <h3>🎸 Guitar</h3>
 
-</section>
+            <p class="card-description">
+              Guitar training from basic techniques onward.
+            </p>
 
-</div>
+            <div class="fee">₹2000 / Month</div>
 
-<a
-href="https://wa.me/919008178901"
-class="whatsapp"
-target="_blank">
+            <div class="slot">
+              <strong>Day:</strong> Sunday
+              <br>
+              <strong>Time:</strong> 8:30 AM - 10:00 AM
+            </div>
 
-💬
+            <button
+              type="button"
+              class="register-btn"
+              onclick="selectCourse('Guitar')"
+            >
+              Register for Guitar
+            </button>
+          </article>
 
-</a>
+          <article class="card private-card">
+            <h3>🎹 Private Keyboard Class</h3>
 
-<footer>
+            <span class="course-type">
+              One-to-One Private Class
+            </span>
 
-© 2026 Jnana Kala Sangama
+            <p class="card-description">
+              Individual Keyboard coaching with flexible scheduling.
+            </p>
 
-</footer>
+            <div class="fee">₹2000 / Month</div>
+
+            <div class="slot">
+              <strong>Timing:</strong> Flexible
+              <br>
+              Contact the academy to confirm the private class slot.
+            </div>
+
+            <button
+              type="button"
+              class="register-btn"
+              onclick="selectCourse('Private Keyboard Class')"
+            >
+              Register for Private Keyboard
+            </button>
+          </article>
+
+          <article class="card private-card">
+            <h3>🎸 Private Guitar Class</h3>
+
+            <span class="course-type">
+              One-to-One Private Class
+            </span>
+
+            <p class="card-description">
+              Individual Guitar coaching with flexible scheduling.
+            </p>
+
+            <div class="fee">₹1500 / Per session</div>
+
+            <div class="slot">
+              <strong>Timing:</strong> Flexible
+              <br>
+              Contact the academy to confirm the private class slot.
+            </div>
+
+            <button
+              type="button"
+              class="register-btn"
+              onclick="selectCourse('Private Guitar Class')"
+            >
+              Register for Private Guitar
+            </button>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="register" class="form-section">
+
+        <div class="step-label">STEP 1</div>
+
+        <h2 class="section-title">
+          Student Registration
+        </h2>
+
+        <p class="section-intro">
+          Complete and submit the registration form before making payment.
+        </p>
+
+        <div id="selectedCourseMessage" class="selected-course">
+          Selected course:
+          <strong id="selectedCourseName"></strong>
+        </div>
+
+        <div class="form-frame-container">
+          <iframe
+            id="registrationFrame"
+            class="registration-frame"
+            src="https://docs.google.com/forms/d/e/1FAIpQLScaYBTRLfFgyepeF1w_QaQ0dXtv-NcwPnTOPMw8AcferKnOxg/viewform?embedded=true"
+            title="Jnana Kala Sangama Student Registration Form"
+            loading="lazy"
+          >
+            Loading registration form...
+          </iframe>
+        </div>
+
+        <p class="form-fallback">
+          If the embedded form does not display,
+          <a
+            id="openFormLink"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScaYBTRLfFgyepeF1w_QaQ0dXtv-NcwPnTOPMw8AcferKnOxg/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open the registration form in a new tab
+          </a>.
+        </p>
+
+      </section>
+
+      <section id="payment" class="payment-box">
+
+        <div class="step-label">STEP 2</div>
+
+        <h2 class="section-title">
+          Pay Course Fee
+        </h2>
+
+        <div class="payment-amount">
+          ₹1500 Per Session
+        </div>
+
+        <p>
+          After submitting the registration form, complete the course fee
+          payment using Razorpay.
+        </p>
+
+        <a
+          href="https://razorpay.me/@chandrappalokagna"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="payment-btn"
+        >
+          Pay ₹1500 via Razorpay
+        </a>
+
+        <p class="payment-note">
+          Please save the Razorpay payment receipt or payment reference
+          number for verification.
+        </p>
+
+      </section>
+
+      <section id="contact" class="contact">
+
+        <h2 class="section-title">
+          Contact Us
+        </h2>
+
+        <div class="contact-details">
+          <p>
+            <strong>Jnana Kala Sangama</strong>
+          </p>
+
+          <p>Bengaluru, Karnataka</p>
+
+          <p>
+            Email:
+            <a href="mailto:lokagna1993@gmail.com">
+              lokagna1993@gmail.com
+            </a>
+          </p>
+
+          <p>
+            WhatsApp:
+            <a
+              href="https://wa.me/919008178901"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9008178901
+            </a>
+          </p>
+
+          <p>Admission Fee: ₹2000 one time pay Non-refund</p>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <a
+    href="https://wa.me/919008178901"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact Jnana Kala Sangama on WhatsApp"
+    title="Chat on WhatsApp"
+  >
+    💬
+  </a>
+
+  <footer>
+    © 2026 Jnana Kala Sangama. All Rights Reserved.
+  </footer>
+
+  <script>
+    const GOOGLE_FORM_BASE =
+      "https://docs.google.com/forms/d/e/1FAIpQLScaYBTRLfFgyepeF1w_QaQ0dXtv-NcwPnTOPMw8AcferKnOxg/viewform";
+
+    /*
+      REQUIRED FOR TRUE GOOGLE FORM PREFILLING:
+
+      In Google Forms:
+      1. Open the form.
+      2. Click the three-dot menu.
+      3. Select "Get pre-filled link".
+      4. Select any course in the Course question.
+      5. Generate and copy the link.
+      6. Find the part that looks like entry.123456789.
+      7. Replace REPLACE_WITH_COURSE_ENTRY_ID below with only that number.
+
+      Example:
+      const COURSE_ENTRY_ID = "123456789";
+    */
+
+    const COURSE_ENTRY_ID = "REPLACE_WITH_COURSE_ENTRY_ID";
+
+    function buildFormUrl(courseName, embedded) {
+      const entryIdConfigured =
+        COURSE_ENTRY_ID !== "REPLACE_WITH_COURSE_ENTRY_ID";
+
+      if (!entryIdConfigured) {
+        return embedded
+          ? GOOGLE_FORM_BASE + "?embedded=true"
+          : GOOGLE_FORM_BASE + "?usp=header";
+      }
+
+      const parameters = new URLSearchParams();
+
+      parameters.set("usp", "pp_url");
+      parameters.set(
+        "entry." + COURSE_ENTRY_ID,
+        courseName
+      );
+
+      if (embedded) {
+        parameters.set("embedded", "true");
+      }
+
+      return GOOGLE_FORM_BASE + "?" + parameters.toString();
+    }
+
+    function selectCourse(courseName) {
+      const frame = document.getElementById("registrationFrame");
+      const formLink = document.getElementById("openFormLink");
+      const message = document.getElementById("selectedCourseMessage");
+      const selectedName = document.getElementById("selectedCourseName");
+
+      selectedName.textContent = courseName;
+      message.style.display = "block";
+
+      frame.src = buildFormUrl(courseName, true);
+      formLink.href = buildFormUrl(courseName, false);
+
+      document.getElementById("register").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  </script>
 
 </body>
 </html>
