@@ -2,17 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Jnana Kala Sangama registrations for Bharatanatyam, Karate, Western Dance, Yoga, Keyboard and Guitar classes."
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jnana Kala Sangama registrations for Bharatanatyam, Karate, Western Dance, Yoga, Keyboard and Guitar classes.">
   <title>Jnana Kala Sangama</title>
 
   <style>
@@ -188,6 +179,7 @@
 
     .slot {
       margin-top: 12px;
+      margin-bottom: 16px;
       padding: 13px;
       color: #444444;
       background: #fff3e8;
@@ -207,7 +199,6 @@
       font-size: 15px;
       font-weight: bold;
       text-align: center;
-      text-decoration: none;
       cursor: pointer;
       transition: background 0.2s ease;
     }
@@ -306,6 +297,17 @@
       border-color: #dce6ff;
     }
 
+    .payment-selection {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto 16px;
+      padding: 12px 16px;
+      color: #1e3a8a;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+    }
+
     .payment-amount {
       margin: 8px 0;
       color: #1e40af;
@@ -335,6 +337,13 @@
       margin-top: 16px;
       color: #666666;
       font-size: 14px;
+    }
+
+    .admission-note {
+      margin-top: 14px;
+      color: #9a3412;
+      font-size: 14px;
+      font-weight: bold;
     }
 
     .contact-details {
@@ -431,267 +440,155 @@
 </head>
 
 <body>
-
   <header>
     <h1>🪷 Jnana Kala Sangama</h1>
     <p>Learn • Create • Grow</p>
 
     <nav aria-label="Main navigation">
-      #coursesCourses & Slots</a>
-      #registerRegistration</a>
-      #paymentPayment</a>
-      #contactContact</a>
+      <a href="#courses">Courses & Slots</a>
+      <a href="#register">Registration</a>
+      <a href="#payment">Payment</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-
     <section class="hero">
       <h2>Admissions Open</h2>
-
       <p>
         Registrations are open for Bharatanatyam, Karate, Western Dance,
         Yoga, Keyboard and Guitar classes.
       </p>
-
-      #courses
-        View Courses and Register
-      </a>
+      <a href="#courses" class="hero-button">View Courses and Register</a>
     </section>
 
     <div class="container">
-
       <section id="courses">
-
-        <h2 class="section-title">
-          Available Courses & Timings
-        </h2>
-
+        <h2 class="section-title">Available Courses & Timings</h2>
         <p class="section-intro">
-          Select a course below. The website will open the registration
-          section and attempt to prefill the selected course in Google Forms.
+          Select a course below. The selected course will appear above the
+          registration form. If the Google Forms course entry ID is configured,
+          the course will also be prefilled in the form.
         </p>
 
         <div class="activities">
-
           <article class="card">
             <h3>🪷 Bharatanatyam</h3>
-
-            <p class="card-description">
-              Classical Indian dance training.
-            </p>
-
+            <p class="card-description">Classical Indian dance training.</p>
             <div class="fee">₹2000 / Month</div>
-
             <div class="slot">
-              <strong>Days:</strong> Monday & Wednesday
-              <br>
+              <strong>Days:</strong> Monday & Wednesday<br>
               <strong>Time:</strong> 5:30 PM - 6:30 PM
             </div>
-
-            <button
-              type="button"
-              class="register-btn"
-              onclick="selectCourse('Bharatanatyam')"
-            >
+            <button type="button" class="register-btn" onclick="selectCourse('Bharatanatyam', 2000, 'month')">
               Register for Bharatanatyam
             </button>
           </article>
 
           <article class="card">
             <h3>🥋 Karate</h3>
-
-            <p class="card-description">
-              Self-defence, discipline and fitness training.
-            </p>
-
+            <p class="card-description">Self-defence, discipline and fitness training.</p>
             <div class="fee">₹2000 / Month</div>
-
             <div class="slot">
-              <strong>Days:</strong> Tuesday & Thursday
-              <br>
+              <strong>Days:</strong> Tuesday & Thursday<br>
               <strong>Time:</strong> 5:30 PM - 6:30 PM
             </div>
-
-            <button
-              type="button"
-              class="register-btn"
-              onclick="selectCourse('Karate')"
-            >
+            <button type="button" class="register-btn" onclick="selectCourse('Karate', 2000, 'month')">
               Register for Karate
             </button>
           </article>
 
           <article class="card">
             <h3>💃 Western Dance</h3>
-
-            <p class="card-description">
-              Modern dance and performance training.
-            </p>
-
+            <p class="card-description">Modern dance and performance training.</p>
             <div class="fee">₹2000 / Month</div>
-
             <div class="slot">
-              <strong>Days:</strong> Thursday & Saturday
-              <br>
+              <strong>Days:</strong> Thursday & Saturday<br>
               <strong>Time:</strong> 5:30 PM - 6:30 PM
             </div>
-
-            <button
-              type="button"
-              class="register-btn"
-              onclick="selectCourse('Western Dance')"
-            >
+            <button type="button" class="register-btn" onclick="selectCourse('Western Dance', 2000, 'month')">
               Register for Western Dance
             </button>
           </article>
 
           <article class="card">
             <h3>🧘 Yoga</h3>
-
-            <p class="card-description">
-              Health, flexibility and wellness sessions.
-            </p>
-
+            <p class="card-description">Health, flexibility and wellness sessions.</p>
             <div class="fee">₹2000 / Month</div>
-
             <div class="slot">
-              <strong>Days:</strong> Monday to Thursday
-              <br>
+              <strong>Days:</strong> Monday to Thursday<br>
               <strong>Time:</strong> 5:30 AM - 6:30 AM
             </div>
-
-            <button
-              type="button"
-              class="register-btn"
-              onclick="selectCourse('Yoga')"
-            >
+            <button type="button" class="register-btn" onclick="selectCourse('Yoga', 2000, 'month')">
               Register for Yoga
             </button>
           </article>
 
           <article class="card">
             <h3>🎹 Keyboard</h3>
-
-            <p class="card-description">
-              Keyboard and music fundamentals.
-            </p>
-
+            <p class="card-description">Keyboard and music fundamentals.</p>
             <div class="fee">₹2000 / Month</div>
-
             <div class="slot">
-              <strong>Day:</strong> Sunday
-              <br>
+              <strong>Day:</strong> Sunday<br>
               <strong>Time:</strong> 8:30 AM - 10:00 AM
             </div>
-
-            <button
-              type="button"
-              class="register-btn"
-              onclick="selectCourse('Keyboard')"
-            >
+            <button type="button" class="register-btn" onclick="selectCourse('Keyboard', 2000, 'month')">
               Register for Keyboard
             </button>
           </article>
 
           <article class="card">
             <h3>🎸 Guitar</h3>
-
-            <p class="card-description">
-              Guitar training from basic techniques onward.
-            </p>
-
+            <p class="card-description">Guitar training from basic techniques onward.</p>
             <div class="fee">₹2000 / Month</div>
-
             <div class="slot">
-              <strong>Day:</strong> Sunday
-              <br>
+              <strong>Day:</strong> Sunday<br>
               <strong>Time:</strong> 8:30 AM - 10:00 AM
             </div>
-
-            <button
-              type="button"
-              class="register-btn"
-              onclick="selectCourse('Guitar')"
-            >
+            <button type="button" class="register-btn" onclick="selectCourse('Guitar', 2000, 'month')">
               Register for Guitar
             </button>
           </article>
 
           <article class="card private-card">
             <h3>🎹 Private Keyboard Class</h3>
-
-            <span class="course-type">
-              One-to-One Private Class
-            </span>
-
-            <p class="card-description">
-              Individual Keyboard coaching with flexible scheduling.
-            </p>
-
-            <div class="fee">₹1500 / Per Session</div>
-
+            <span class="course-type">One-to-One Private Class</span>
+            <p class="card-description">Individual Keyboard coaching with flexible scheduling.</p>
+            <div class="fee">₹1500 / Session</div>
             <div class="slot">
-              <strong>Timing:</strong> Flexible
-              <br>
+              <strong>Timing:</strong> Flexible<br>
               Contact the academy to confirm the private class slot.
             </div>
-
-            <button
-              type="button"
-              class="register-btn"
-              onclick="selectCourse('Private Keyboard Class')"
-            >
+            <button type="button" class="register-btn" onclick="selectCourse('Private Keyboard Class', 1500, 'session')">
               Register for Private Keyboard
             </button>
           </article>
 
           <article class="card private-card">
             <h3>🎸 Private Guitar Class</h3>
-
-            <span class="course-type">
-              One-to-One Private Class
-            </span>
-
-            <p class="card-description">
-              Individual Guitar coaching with flexible scheduling.
-            </p>
-
-            <div class="fee">₹1500 / Per session</div>
-
+            <span class="course-type">One-to-One Private Class</span>
+            <p class="card-description">Individual Guitar coaching with flexible scheduling.</p>
+            <div class="fee">₹1500 / Session</div>
             <div class="slot">
-              <strong>Timing:</strong> Flexible
-              <br>
+              <strong>Timing:</strong> Flexible<br>
               Contact the academy to confirm the private class slot.
             </div>
-
-            <button
-              type="button"
-              class="register-btn"
-              onclick="selectCourse('Private Guitar Class')"
-            >
+            <button type="button" class="register-btn" onclick="selectCourse('Private Guitar Class', 1500, 'session')">
               Register for Private Guitar
             </button>
           </article>
-
         </div>
       </section>
 
       <section id="register" class="form-section">
-
         <div class="step-label">STEP 1</div>
-
-        <h2 class="section-title">
-          Student Registration
-        </h2>
-
+        <h2 class="section-title">Student Registration</h2>
         <p class="section-intro">
           Complete and submit the registration form before making payment.
         </p>
 
         <div id="selectedCourseMessage" class="selected-course">
-          Selected course:
-          <strong id="selectedCourseName"></strong>
+          Selected course: <strong id="selectedCourseName"></strong>
         </div>
 
         <div class="form-frame-container">
@@ -717,78 +614,63 @@
             open the registration form in a new tab
           </a>.
         </p>
-
       </section>
 
       <section id="payment" class="payment-box">
-
         <div class="step-label">STEP 2</div>
+        <h2 class="section-title">Pay Course Fee</h2>
 
-        <h2 class="section-title">
-          Pay Course Fee
-        </h2>
-
-        <div class="payment-amount">
-          ₹1500 Per Session
+        <div id="paymentSelection" class="payment-selection">
+          Payment for: <strong id="paymentCourseName"></strong>
         </div>
 
+        <div id="paymentAmount" class="payment-amount">₹2000 Per Month</div>
+
         <p>
-          After submitting the registration form, complete the course fee
-          payment using Razorpay.
+          After submitting the registration form, complete the applicable
+          course fee payment using Razorpay.
         </p>
 
         <a
+          id="paymentButton"
           href="https://razorpay.me/@chandrappalokagna"
           target="_blank"
           rel="noopener noreferrer"
           class="payment-btn"
         >
-          Pay ₹1500 via Razorpay
+          Pay via Razorpay
         </a>
 
         <p class="payment-note">
-          Please save the Razorpay payment receipt or payment reference
-          number for verification.
+          Please save the Razorpay payment receipt or payment reference number
+          for verification.
         </p>
 
+        <p class="admission-note">
+          Admission fee: ₹2000 one-time payment. Non-refundable.
+        </p>
       </section>
 
       <section id="contact" class="contact">
-
-        <h2 class="section-title">
-          Contact Us
-        </h2>
-
+        <h2 class="section-title">Contact Us</h2>
         <div class="contact-details">
-          <p>
-            <strong>Jnana Kala Sangama</strong>
-          </p>
-
+          <p><strong>Jnana Kala Sangama</strong></p>
           <p>Bengaluru, Karnataka</p>
-
           <p>
             Email:
-            <a href="mailto:lokagna1993@gmail.com">
-              lokagna1993@gmail.com
-            </a>
+            <a href="mailto:lokagna1993@gmail.com">lokagna1993@gmail.com</a>
           </p>
-
           <p>
             WhatsApp:
-            <a
-              href="https://wa.me/919008178901"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://wa.me/919008178901" target="_blank" rel="noopener noreferrer">
               9008178901
             </a>
           </p>
-
-          <p>Admission Fee: ₹2000 one time pay Non-refund</p>
+          <p>Regular course fee: ₹2000 per month</p>
+          <p>Private Keyboard/Guitar fee: ₹1500 per session</p>
+          <p>Admission fee: ₹2000 one time, non-refundable</p>
         </div>
-
       </section>
-
     </div>
   </main>
 
@@ -812,21 +694,15 @@
       "https://docs.google.com/forms/d/e/1FAIpQLScaYBTRLfFgyepeF1w_QaQ0dXtv-NcwPnTOPMw8AcferKnOxg/viewform";
 
     /*
-      REQUIRED FOR TRUE GOOGLE FORM PREFILLING:
+      To enable true Google Form course prefilling, replace the placeholder
+      below with the numeric ID from the Course question's prefilled URL.
 
-      In Google Forms:
-      1. Open the form.
-      2. Click the three-dot menu.
-      3. Select "Get pre-filled link".
-      4. Select any course in the Course question.
-      5. Generate and copy the link.
-      6. Find the part that looks like entry.123456789.
-      7. Replace REPLACE_WITH_COURSE_ENTRY_ID below with only that number.
+      Example prefilled URL section:
+      entry.123456789=Bharatanatyam
 
-      Example:
+      Required code:
       const COURSE_ENTRY_ID = "123456789";
     */
-
     const COURSE_ENTRY_ID = "REPLACE_WITH_COURSE_ENTRY_ID";
 
     function buildFormUrl(courseName, embedded) {
@@ -840,12 +716,8 @@
       }
 
       const parameters = new URLSearchParams();
-
       parameters.set("usp", "pp_url");
-      parameters.set(
-        "entry." + COURSE_ENTRY_ID,
-        courseName
-      );
+      parameters.set("entry." + COURSE_ENTRY_ID, courseName);
 
       if (embedded) {
         parameters.set("embedded", "true");
@@ -854,14 +726,29 @@
       return GOOGLE_FORM_BASE + "?" + parameters.toString();
     }
 
-    function selectCourse(courseName) {
+    function formatPayment(amount, feeType) {
+      if (feeType === "session") {
+        return "₹" + amount + " Per Session";
+      }
+
+      return "₹" + amount + " Per Month";
+    }
+
+    function selectCourse(courseName, amount, feeType) {
       const frame = document.getElementById("registrationFrame");
       const formLink = document.getElementById("openFormLink");
       const message = document.getElementById("selectedCourseMessage");
       const selectedName = document.getElementById("selectedCourseName");
+      const paymentSelection = document.getElementById("paymentSelection");
+      const paymentCourseName = document.getElementById("paymentCourseName");
+      const paymentAmount = document.getElementById("paymentAmount");
 
       selectedName.textContent = courseName;
       message.style.display = "block";
+
+      paymentCourseName.textContent = courseName;
+      paymentSelection.style.display = "block";
+      paymentAmount.textContent = formatPayment(amount, feeType);
 
       frame.src = buildFormUrl(courseName, true);
       formLink.href = buildFormUrl(courseName, false);
@@ -872,6 +759,5 @@
       });
     }
   </script>
-
 </body>
 </html>
